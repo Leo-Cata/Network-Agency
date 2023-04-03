@@ -11,40 +11,46 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative">
-      <div className="mx-6 flex items-center justify-between py-6">
+    <nav className="relative 2xl:mx-20">
+      <div className="mx-4 flex items-center justify-between py-6">
         <div className="flex space-x-1">
-          <img src={networkLogo} alt="network logo" />
-          <h1 className="font-openSans font-semibold text-mainBlue">Network</h1>
+          <img src={networkLogo} alt="network logo" className="md:w-8" />
+          <h1 className="font-openSans font-semibold text-mainBlue lg:text-3xl">
+            Network
+          </h1>
         </div>
-        <button onClick={handleMenu} className="block opacity-50 md:hidden">
+        <button onClick={handleMenu} className="block opacity-50 lg:hidden">
           {isMenuOpen ? (
             <AiOutlineClose size={24} />
           ) : (
             <AiOutlineMenu size={24} />
           )}
         </button>
-        <ul className="hidden space-x-9 text-mainBlue md:flex [&>li]:cursor-pointer">
+        <ul className="hidden space-x-9 text-mainBlue lg:flex [&>li]:cursor-pointer">
           <li>Pricing</li>
           <li>Success</li>
           <li>Stories</li>
           <li>About Us</li>
           <li>Company</li>
         </ul>
-        <div className="hidden md:block">
-          <CustomButton text={'Contact Us'} isTransparent={false} />
+        <div className="hidden lg:block">
+          <CustomButton
+            displayText={'Contact Us'}
+            isTransparent={true}
+            textColor="text-mainBlue"
+          />
         </div>
       </div>
 
       <motion.div
         layout
         onClick={handleMenu}
-        className="absolute w-full md:hidden">
+        className="absolute w-full  lg:hidden">
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
               exit={{ scaleY: 0 }}
-              className="flex origin-top flex-col items-center rounded-[3rem] font-openSans text-mainBlue shadow-md">
+              className="flex origin-top flex-col items-center rounded-b-[3rem] bg-mainBackground font-openSans text-mainBlue shadow-md">
               <ul className="space-y-4 [&>li]:cursor-pointer">
                 <li>Pricing</li>
                 <li>Success</li>
@@ -53,7 +59,11 @@ const Navbar = () => {
                 <li>Company</li>
               </ul>
               <div className="my-8">
-                <CustomButton text={'Contact Us'} isTransparent={false} />
+                <CustomButton
+                  displayText={'Contact Us'}
+                  isTransparent={true}
+                  textColor="text-mainBlue"
+                />
               </div>
             </motion.div>
           )}
