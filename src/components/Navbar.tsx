@@ -11,8 +11,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative">
-      <div className="mx-6 flex items-center justify-between py-6">
+    <nav className="relative md:mx-20">
+      <div className="mx-4 flex items-center justify-between py-6">
         <div className="flex space-x-1">
           <img src={networkLogo} alt="network logo" />
           <h1 className="font-openSans font-semibold text-mainBlue">Network</h1>
@@ -32,14 +32,18 @@ const Navbar = () => {
           <li>Company</li>
         </ul>
         <div className="hidden md:block">
-          <CustomButton text={'Contact Us'} isTransparent={false} />
+          <CustomButton
+            displayText={'Contact Us'}
+            isTransparent={true}
+            textColor="text-mainBlue"
+          />
         </div>
       </div>
 
       <motion.div
         layout
         onClick={handleMenu}
-        className="absolute w-full md:hidden">
+        className="absolute w-full bg-mainBackground md:hidden">
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
@@ -53,7 +57,11 @@ const Navbar = () => {
                 <li>Company</li>
               </ul>
               <div className="my-8">
-                <CustomButton text={'Contact Us'} isTransparent={false} />
+                <CustomButton
+                  displayText={'Contact Us'}
+                  isTransparent={true}
+                  textColor="text-mainBlue"
+                />
               </div>
             </motion.div>
           )}

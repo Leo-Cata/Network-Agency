@@ -1,18 +1,19 @@
 import React from 'react';
 
 interface props {
-  text: string;
+  displayText: string;
   isTransparent: boolean;
+  textColor: string;
 }
 
-const CustomButton = ({ text, isTransparent }: props) => {
+const CustomButton = ({ displayText, isTransparent, textColor }: props) => {
   return (
     <div className="rounded-xl bg-gradient-to-r from-gradientOrangeLight to-gradientOrangeDark p-[1px]">
       <button
-        className={`h-full w-full rounded-xl px-7 py-3 font-openSans font-medium text-mainBlue ${
-          isTransparent ? '' : 'bg-mainBackground'
+        className={`h-full w-full rounded-xl px-7 py-3 font-openSans font-medium ${textColor} ${
+          isTransparent ? 'bg-mainBackground' : ''
         }`}>
-        {text}
+        {displayText}
       </button>
     </div>
   );
