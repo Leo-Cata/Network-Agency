@@ -50,7 +50,7 @@ const Navbar = () => {
           {isMenuOpen && (
             <motion.div
               exit={{ scaleY: 0 }}
-              className="flex origin-top flex-col items-center rounded-[3rem] bg-mainBackground font-openSans text-mainBlue shadow-md">
+              className="flex origin-top flex-col items-center rounded-b-[3rem] bg-mainBackground font-openSans text-mainBlue shadow-md">
               <ul className="space-y-4 [&>li]:cursor-pointer">
                 <li>Pricing</li>
                 <li>Success</li>

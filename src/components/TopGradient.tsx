@@ -5,7 +5,7 @@ interface Props {
 
 const TopGradient = ({ children }: Props) => {
   return (
-    <div className="relative -top-52 -z-50 h-[2886px] rounded-[100px] bg-gradient-to-tl from-gradientPurple to-gradientBlue">
+    <div className="mt- w-full rounded-[40px] bg-gradient-to-tl from-gradientPurple to-gradientBlue lg:rounded-[100px]">
       {children}
     </div>
   );

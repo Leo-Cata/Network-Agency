@@ -8,9 +8,10 @@ function App() {
     <div>
       <Navbar />
       <Hero />
-      {/* <TopGradient>
+
+      <TopGradient>
         <TechCompanies />
-      </TopGradient> */}
+      </TopGradient>
     </div>
   );
 }
