@@ -4,7 +4,7 @@ import CustomButton from './CustomButton';
 
 const Hero = () => {
   return (
-    <div className="mx-4 max-w-7xl md:mx-16 2xl:mx-[23rem]">
+    <div className="mx-6 max-w-7xl md:mx-16 2xl:mx-[23rem]">
       <div className=" z-50 font-openSans text-5xl font-extrabold text-mainBlue md:flex md:justify-end lg:text-8xl">
         <h1 className="block md:inline-block">
           We Develope the{' '}

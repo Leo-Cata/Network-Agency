@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <nav className="relative 2xl:mx-20">
-      <div className="mx-4 flex items-center justify-between py-6">
+      <div className="mx-6 flex items-center justify-between py-6">
         <div className="flex space-x-1">
           <img src={networkLogo} alt="network logo" className="md:w-8" />
           <h1 className="font-openSans font-semibold text-mainBlue lg:text-3xl">
