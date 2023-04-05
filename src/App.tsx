@@ -1,3 +1,4 @@
+import Features from './components/Features';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import TechCompanies from './components/TechCompanies';
@@ -8,9 +9,9 @@ function App() {
     <div>
       <Navbar />
       <Hero />
-
       <TopGradient>
         <TechCompanies />
+        <Features />
       </TopGradient>
     </div>
   );

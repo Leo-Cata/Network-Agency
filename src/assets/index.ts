@@ -7,6 +7,11 @@ import slack from './network_slack.png';
 import amazon from './network_amazon.png';
 import alphabet from './network_alphabet.png';
 import orangePerson from './network_person.png';
+import person1 from './network_person_icon1.png';
+import person2 from './network_person_icon2.png';
+import person3 from './network_person_icon3.png';
+import person4 from './network_person_icon4.png';
+import notepad from './network_notepad.svg';
 
 export {
   networkLogo,
@@ -18,4 +23,9 @@ export {
   amazon,
   alphabet,
   orangePerson,
+  person1,
+  person2,
+  person3,
+  person4,
+  notepad,
 };
