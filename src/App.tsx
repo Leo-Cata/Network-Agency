@@ -15,7 +15,7 @@ function App() {
         <TechCompanies />
         <Features />
         <Services />
-        <About/>
+        <About />
       </TopGradient>
     </div>
   );

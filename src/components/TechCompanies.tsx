@@ -4,9 +4,11 @@ const techCompanies = [alphabet, amazon, azure, slack];
 
 const TechCompanies = () => {
   return (
-    <div className="my-36 flex flex-col items-center justify-evenly xl:flex-row-reverse">
-      <img src={orangePerson} alt="" />
-      <div className="mx-14 mt-11 grid grid-cols-2 justify-items-center gap-y-5 xl:mt-20 xl:flex xl:space-x-5">
+    <div className="flex flex-col items-center justify-evenly xl:flex-row-reverse xl:items-end">
+      <div className="flex h-32 w-fit max-w-[330px] items-end rounded-full bg-[#0C185B] md:max-w-[400px] lg:max-w-[570px] xl:h-52">
+        <img src={orangePerson} alt="" />
+      </div>
+      <div className="mx-14 my-11 grid grid-cols-2 justify-items-center gap-y-5 xl:mt-20 xl:flex xl:space-x-5">
         {techCompanies.map((company, index) => (
           <img src={company} alt="" key={index} className="h-[50px] w-28" />
         ))}
