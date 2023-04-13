@@ -12,6 +12,8 @@ import person2 from './network_person_icon2.png';
 import person3 from './network_person_icon3.png';
 import person4 from './network_person_icon4.png';
 import notepad from './network_notepad.svg';
+import star from './network_star.svg';
+import orange from './network_circle.svg';
 
 export {
   networkLogo,
@@ -28,4 +30,6 @@ export {
   person3,
   person4,
   notepad,
+  star,
+  orange,
 };
