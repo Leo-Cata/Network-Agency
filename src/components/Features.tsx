@@ -5,7 +5,7 @@ import { notepad, person1, person2, person3, person4 } from '../assets';
 const Features = () => {
   const peopleIcons = [person1, person2, person3, person4];
   return (
-    <div className="mx-6 flex flex-col items-center lg:justify-between 2xl:mx-[23rem] 2xl:flex-row">
+    <div className="mx-6 flex flex-col items-center lg:justify-between 2xl:mx-[18.5rem] 2xl:flex-row">
       <div className=" space-y-6 2xl:block">
         <div className="space-y-3 text-white">
           <h2 className="font-openSans text-4xl font-semibold md:text-6xl">
