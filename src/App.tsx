@@ -1,4 +1,5 @@
 import About from './components/About';
+import Certifications from './components/Certifications';
 import Features from './components/Features';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
@@ -16,6 +17,7 @@ function App() {
         <Features />
         <Services />
         <About />
+        <Certifications />
       </TopGradient>
     </div>
   );

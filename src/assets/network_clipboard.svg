@@ -1,0 +1,23 @@
+<svg width="271" height="154" viewBox="0 0 271 154" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M70.2533 0.709473H166.053C173.892 0.709473 180.246 7.06371 180.246 14.9021V138.377C180.246 146.216 173.892 152.57 166.053 152.57H96.5096C88.6712 152.57 82.317 146.216 82.317 138.377V29.0946" stroke="white" stroke-width="1.41926"/>
+<path d="M100.767 26.2563H112.121" stroke="white" stroke-width="2.83852" stroke-linecap="round"/>
+<path d="M148.312 26.2563H159.666" stroke="white" stroke-width="2.83852" stroke-linecap="round"/>
+<path d="M117.799 26.2563H141.926" stroke="#FDD20D" stroke-width="2.83852" stroke-linecap="round"/>
+<path d="M100.767 42.5776H124.894" stroke="#F37DC0" stroke-width="2.83852" stroke-linecap="round"/>
+<path d="M164.634 112.122H140.507" stroke="#F37DC0" stroke-width="2.83852" stroke-linecap="round"/>
+<path d="M129.862 42.5776H159.667" stroke="#F37DC0" stroke-width="2.83852" stroke-linecap="round"/>
+<path d="M130.572 72.3823H100.767" stroke="#F37DC0" stroke-width="2.83852" stroke-linecap="round"/>
+<path d="M130.572 103.606H100.767" stroke="white" stroke-width="2.83852" stroke-linecap="round"/>
+<path d="M130.572 119.218H100.767" stroke="#FDD20D" stroke-width="2.83852" stroke-linecap="round"/>
+<path d="M130.572 134.83H100.767" stroke="#F37DC0" stroke-width="2.83852" stroke-linecap="round"/>
+<path d="M100.767 56.7705L159.666 56.7705" stroke="#FDD20D" stroke-width="2.83852" stroke-linecap="round"/>
+<path d="M100.767 87.2842L159.666 87.2842" stroke="#FDD20D" stroke-width="2.83852" stroke-linecap="round"/>
+<path d="M56.7705 12.7733C56.7705 5.7188 62.4893 0 69.5438 0H70.2535C77.308 0 83.0268 5.71881 83.0268 12.7733V29.8044H56.7705V12.7733Z" fill="white"/>
+<circle cx="228.855" cy="45.771" r="2.4837" stroke="white" stroke-width="1.41926"/>
+<circle cx="3.19333" cy="69.1889" r="2.4837" stroke="white" stroke-width="1.41926"/>
+<circle cx="42.9328" cy="30.8686" r="4.61259" stroke="#F37DC0" stroke-width="1.41926"/>
+<circle cx="195.503" cy="124.54" r="4.61259" stroke="#F37DC0" stroke-width="1.41926"/>
+<circle cx="207.566" cy="14.5471" r="6.03185" stroke="white" stroke-width="1.41926"/>
+<rect x="56.4852" y="103.9" width="5.67703" height="38.32" rx="2.83852" transform="rotate(45 56.4852 103.9)" stroke="#F37DC0" stroke-width="1.41926"/>
+<rect x="226.631" y="115.878" width="5.67703" height="46.8355" rx="2.83852" transform="rotate(-60 226.631 115.878)" stroke="#FDD20D" stroke-width="1.41926"/>
+</svg>

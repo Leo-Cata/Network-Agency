@@ -14,6 +14,7 @@ import person4 from './network_person_icon4.png';
 import notepad from './network_notepad.svg';
 import star from './network_star.svg';
 import orange from './network_circle.svg';
+import clipboard from './network_clipboard.svg';
 
 export {
   networkLogo,
@@ -32,4 +33,5 @@ export {
   notepad,
   star,
   orange,
+  clipboard,
 };
