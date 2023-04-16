@@ -1,9 +1,9 @@
 import React from 'react';
-import { clipboard } from '../assets';
+import { clipboard, yellowCertification } from '../assets';
 
 const Certifications = () => {
   return (
-    <div className="relative flex h-28 justify-center">
+    <div className="relative flex h-28 justify-center xl:h-48">
       <div className="absolute mx-6">
         <div className="flex flex-col items-center rounded-[40px] border-[6px] border-white bg-gradient-to-t from-gradientLightBlueDarker to-gradientLightBlue font-openSans text-3xl font-semibold text-white xl:flex-row xl:space-x-56 xl:py-10 xl:pb-20">
           <div className="xl:space-y-16 xl:pl-[99px]">
@@ -27,6 +27,11 @@ const Certifications = () => {
             </p>
           </div>
         </div>
+        <img
+          src={yellowCertification}
+          alt="yellow form"
+          className="absolute -bottom-60 -left-44 z-40 hidden w-[347px] xl:block"
+        />
       </div>
     </div>
   );

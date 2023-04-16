@@ -50,7 +50,7 @@ const Cards = () => {
         const { title, text, features } = data;
         const featureKeys = Object.keys(features);
         return (
-          <div className="h-[400px] w-[350px] origin-bottom rounded-3xl border-2 border-white/20 bg-mainBlue p-8 text-start font-openSans text-white transition-all  duration-300 hover:border-white hover:bg-gradient-to-t hover:from-gradientLightBlueDarker hover:to-gradientLightBlue xl:hover:scale-110">
+          <div className="h-[400px] max-w-[350px] origin-bottom rounded-3xl border-2 border-white/20 bg-mainBlue p-8 text-start font-openSans text-white transition-all  duration-300 hover:border-white hover:bg-gradient-to-t hover:from-gradientLightBlueDarker hover:to-gradientLightBlue xl:hover:scale-110">
             <div>
               <h2 className="text-3xl font-semibold">{title}</h2>
               <p className="py-3">{text}</p>

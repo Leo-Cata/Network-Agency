@@ -1,14 +1,14 @@
 import React from 'react';
 import CustomButton from './CustomButton';
 import AboutCards from './AboutCards';
-import { orange } from '../assets';
+import { orangeCircle } from '../assets';
 
 const About = () => {
   return (
     <div className="py-10">
       <div className="relative">
         <img
-          src={orange}
+          src={orangeCircle}
           alt=""
           className="absolute -right-12 top-0 hidden xl:block"
         />

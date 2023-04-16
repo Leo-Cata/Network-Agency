@@ -1,5 +1,5 @@
 import React from 'react';
-import { abstractPurplePink, arrows, eye } from '../assets';
+import { heroPurple, arrows, eye } from '../assets';
 import CustomButton from './CustomButton';
 
 const Hero = () => {
@@ -26,7 +26,7 @@ const Hero = () => {
           brands
         </h1>
         <img
-          src={abstractPurplePink}
+          src={heroPurple}
           alt="abstract form"
           className="absolute -right-48 -z-50 hidden w-96 md:block"
         />
@@ -46,7 +46,7 @@ const Hero = () => {
         </div>
       </div>
       <img
-        src={abstractPurplePink}
+        src={heroPurple}
         alt="abstract form"
         className="absolute -right-8 w-28 md:hidden"
       />
