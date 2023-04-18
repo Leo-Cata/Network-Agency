@@ -21,9 +21,17 @@ import yellowProjects from './network_projects_abstract_yellow.svg';
 import yellowEServices from './network_services_abstract_yellow_e.svg';
 import quotationsTestimonials from './network_testimonials_quotation.svg';
 import starsFaq from './network_faq_star_and_forms.svg';
+import geminiProject from './network_gemini.png';
+import silvProject from './network_silv.png';
+import goodrootProject from './network_goodroot.png';
+import olipopProject from './network_olipop.png';
 
 export {
   networkLogo,
+  olipopProject,
+  geminiProject,
+  silvProject,
+  goodrootProject,
   starsFaq,
   quotationsTestimonials,
   yellowEServices,

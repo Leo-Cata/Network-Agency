@@ -12,6 +12,7 @@ module.exports = {
         gradientOrangeDark: '#FE804B',
         gradientLightBlue: '#7795FD',
         gradientLightBlueDarker: '#4958CC',
+        darkBlueBackground: '#282857',
       },
       fontFamily: {
         atkinson: ['Atkinson Hyperlegible', 'sans-serif'],
