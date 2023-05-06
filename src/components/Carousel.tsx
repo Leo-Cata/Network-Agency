@@ -79,10 +79,10 @@ const Carousel = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.6 }}>
-              <h2 className="my-5 text-2xl font-semibold leading-[50px] 2xl:my-0 2xl:mb-20">
+              <h2 className="my-5 text-2xl font-semibold leading-[50px] 2xl:my-0 2xl:mb-20 2xl:text-4xl">
                 {carouselItems[activeIndex].title}
               </h2>
-              <p className="mb-10 text-lg leading-9 opacity-80 2xl:mb-14">
+              <p className="mb-10 text-lg leading-9 opacity-80 2xl:mb-14 2xl:text-2xl">
                 {carouselItems[activeIndex].text}
               </p>
               <h3 className="mb-1 text-lg font-semibold">
