@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { quotationsTestimonials } from '../assets';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface CarouselItemProps {
   title: string;
@@ -41,67 +42,86 @@ const Carousel = () => {
   const [lastClickedButton, setLastClickedButton] = useState<'prev' | 'next'>();
 
   const handleNextClick = () => {
+    setLastClickedButton('next');
+
     setActiveIndex((prevIndex) =>
       prevIndex === carouselItems.length - 1 ? prevIndex : prevIndex + 1,
     );
-    setLastClickedButton('next');
   };
   const handlePrevClick = () => {
+    setLastClickedButton('prev');
+
     setActiveIndex((prevIndex) =>
       prevIndex === 0 ? prevIndex : prevIndex - 1,
     );
-    setLastClickedButton('prev');
   };
 
   return (
-    <div className="mx-6 rounded-[40px] border-[6px] border-white bg-gradient-to-tr from-gradientOrangeLight to-gradientOrangeDark 2xl:mx-[23rem]">
-      <div className="mx-8 my-10 flex flex-col 2xl:mx-[100px] 2xl:my-20 2xl:flex-row 2xl:space-x-5">
-        <img
-          src={quotationsTestimonials}
-          alt=""
-          className="w-9 self-end 2xl:hidden"
-        />
-        {/* carousel text part */}
-        <div className=" h-[950px] font-openSans text-white 2xl:h-[500px]">
-          <h2 className="my-5 text-[40px] font-semibold leading-[50px] 2xl:my-0 2xl:mb-20">
-            {carouselItems[activeIndex].title}
-          </h2>
-          <p className="mb-10 text-2xl leading-9 opacity-80 2xl:mb-14">
-            {carouselItems[activeIndex].text}
-          </p>
-          <h3 className="mb-1 text-lg font-semibold">
-            {carouselItems[activeIndex].person}
-          </h3>
-          <h4 className="opacity-80">{carouselItems[activeIndex].company}</h4>
-          {/* carousel text part ends */}
-        </div>
-        {/* carousel buttons */}
-        <div className="flex-col justify-between 2xl:flex 2xl:min-w-[200px]">
-          <img
-            src={quotationsTestimonials}
-            alt=""
-            className="hidden w-16 self-end 2xl:block"
-          />
-          <div className="mt-7 flex justify-center space-x-10 text-white 2xl:mt-0">
-            <button
-              className={
-                lastClickedButton === 'prev' ? 'scale-150 duration-300' : ''
-              }
-              onClick={handlePrevClick}>
-              <BsArrowLeft size={30} />
-            </button>
-            <button
-              className={
-                lastClickedButton === 'next' ? 'scale-150 duration-300' : ''
-              }
-              onClick={handleNextClick}>
-              <BsArrowRight size={30} />
-            </button>
+    <AnimatePresence mode="wait">
+      <motion.div
+        layout
+        initial={{ height: 'auto' }}
+        animate={{ height: 'fit-content' }}
+        transition={{ duration: 0.3 }}>
+        <div className="mx-6 rounded-[40px] border-[6px] border-white bg-gradient-to-tr from-gradientOrangeLight to-gradientOrangeDark 2xl:mx-[23rem]">
+          <div className="mx-8 my-10 flex flex-col 2xl:mx-[100px] 2xl:my-20 2xl:flex-row 2xl:space-x-5">
+            <img
+              src={quotationsTestimonials}
+              alt=""
+              className="w-9 self-end 2xl:hidden"
+            />
+            {/* carousel text part */}
+
+            <motion.div
+              key={carouselItems[activeIndex].company}
+              className="font-openSans text-white sm:h-fit"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.6 }}>
+              <h2 className="my-5 text-2xl font-semibold leading-[50px] 2xl:my-0 2xl:mb-20">
+                {carouselItems[activeIndex].title}
+              </h2>
+              <p className="mb-10 text-lg leading-9 opacity-80 2xl:mb-14">
+                {carouselItems[activeIndex].text}
+              </p>
+              <h3 className="mb-1 text-lg font-semibold">
+                {carouselItems[activeIndex].person}
+              </h3>
+              <h4 className="opacity-80">
+                {carouselItems[activeIndex].company}
+              </h4>
+              {/* carousel text part ends */}
+            </motion.div>
+            {/* carousel buttons */}
+            <div className="flex-col justify-between 2xl:flex 2xl:min-w-[200px]">
+              <img
+                src={quotationsTestimonials}
+                alt=""
+                className="hidden w-16 self-end 2xl:block"
+              />
+              <div className="mt-7 flex justify-center space-x-10 text-white 2xl:mt-0">
+                <button
+                  className={
+                    lastClickedButton === 'prev' ? 'scale-150 duration-300' : ''
+                  }
+                  onClick={handlePrevClick}>
+                  <BsArrowLeft size={30} />
+                </button>
+                <button
+                  className={
+                    lastClickedButton === 'next' ? 'scale-150 duration-300' : ''
+                  }
+                  onClick={handleNextClick}>
+                  <BsArrowRight size={30} />
+                </button>
+              </div>
+            </div>
+            {/* carousel buttons end */}
           </div>
         </div>
-        {/* carousel buttons end */}
-      </div>
-    </div>
+      </motion.div>
+    </AnimatePresence>
   );
 };
 
