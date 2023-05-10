@@ -74,7 +74,7 @@ const FaqAccordion = () => {
             </div>
             {activeIndex === index && (
               <motion.p
-                className="pt-3 font-atkinson opacity-60"
+                className="max-w-md pt-3 font-atkinson opacity-60"
                 layout="position"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 0.6 }}

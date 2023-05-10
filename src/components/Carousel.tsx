@@ -63,7 +63,7 @@ const Carousel = () => {
         initial={{ height: 'auto' }}
         animate={{ height: 'fit-content' }}
         transition={{ duration: 0.3 }}>
-        <div className="mx-6 rounded-[40px] border-[6px] border-white bg-gradient-to-tr from-gradientOrangeLight to-gradientOrangeDark 2xl:mx-[23rem]">
+        <div className="mx-6 rounded-[40px] border-[6px] border-white bg-gradient-to-tr from-gradientOrangeLight to-gradientOrangeDark 2xl:mx-32">
           <div className="mx-8 my-10 flex flex-col 2xl:mx-[100px] 2xl:my-20 2xl:flex-row 2xl:space-x-5">
             <img
               src={quotationsTestimonials}
