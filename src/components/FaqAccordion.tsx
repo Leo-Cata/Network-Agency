@@ -48,7 +48,7 @@ const FaqAccordion = () => {
   };
 
   return (
-    <div className="mx-auto w-full max-w-[468px] divide-y-[1px] divide-white/10 py-7">
+    <div className="mx-auto w-full max-w-[570px] divide-y-[1px] divide-white/10 py-7">
       <AnimatePresence mode="wait">
         {accordionItems.map((item, index) => (
           <motion.div
@@ -58,7 +58,7 @@ const FaqAccordion = () => {
             transition={{ duration: 0.3 }}>
             <div
               onClick={() => handleClick(index)}
-              className="flex items-center">
+              className="flex cursor-pointer items-center">
               <motion.h1
                 layout="position"
                 className="pointer select-none font-openSans text-2xl font-semibold">
@@ -76,10 +76,10 @@ const FaqAccordion = () => {
               <motion.p
                 className="pt-3 font-atkinson opacity-60"
                 layout="position"
-                initial={{ opacity: 0, x: 0, y: 0 }}
-                animate={{ opacity: 0.6, x: 0, y: 0 }}
-                exit={{ opacity: 0, x: 0, y: 0 }}
-                transition={{ duration: 0.6, x: 0, y: 0 }}>
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.6 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.6 }}>
                 {item.content}
               </motion.p>
             )}
