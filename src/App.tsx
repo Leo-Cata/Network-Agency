@@ -1,6 +1,9 @@
 import About from './components/About';
+import BottomGradient from './components/BottomGradient';
+import CTA from './components/CTA';
 import Carousel from './components/Carousel';
 import Certifications from './components/Certifications';
+import Faq from './components/Faq';
 import Features from './components/Features';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
@@ -22,7 +25,11 @@ function App() {
         <Certifications />
       </TopGradient>
       <Projects />
-      <Carousel />
+      <BottomGradient>
+        <Carousel />
+        <CTA />
+        <Faq />
+      </BottomGradient>
     </div>
   );
 }
