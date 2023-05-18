@@ -4,7 +4,7 @@ import CustomButton from '../CustomButton';
 
 const BrandandContact = () => {
   return (
-    <div className="justify-between sm:flex">
+    <div className="justify-between border-b-[1px] border-white/10 pb-7 sm:mb-9 sm:flex">
       <img src={networkLogo} alt="network logo" className="w-20 pb-4" />
       <div className="items-center sm:flex">
         <h1 className="pb-3 font-openSans text-white sm:pr-10 sm:pb-0">
