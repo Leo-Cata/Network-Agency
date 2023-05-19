@@ -5,6 +5,7 @@ import Carousel from './components/Carousel';
 import Certifications from './components/Certifications';
 import Faq from './components/Faq';
 import Features from './components/Features';
+import Footer from './components/footer/Footer';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Projects from './components/Projects';
@@ -29,6 +30,7 @@ function App() {
         <Carousel />
         <CTA />
         <Faq />
+        <Footer />
       </BottomGradient>
     </div>
   );
