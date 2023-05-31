@@ -12,14 +12,19 @@ import Projects from './components/Projects';
 import Services from './components/Services';
 import TechCompanies from './components/TechCompanies';
 import TopGradient from './components/TopGradient';
+import Wrapper from './container/Wrapper';
 
 function App() {
   return (
     <div>
       <Navbar />
-      <Hero />
+      <Wrapper>
+        <Hero />
+      </Wrapper>
       <TopGradient>
-        <TechCompanies />
+        <Wrapper>
+          <TechCompanies />
+        </Wrapper>
         <Features />
         <Services />
         <About />
