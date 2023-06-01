@@ -4,7 +4,7 @@ interface Props {
 }
 
 const Wrapper = ({ children }: Props) => {
-  return <div className="mx-6 md:mx-16 2xl:mx-[300px]">{children}</div>;
+  return <div className="mx-6 md:mx-16 2xl:mx-[200px]">{children}</div>;
 };
 
 export default Wrapper;

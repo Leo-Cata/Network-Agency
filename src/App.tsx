@@ -30,7 +30,10 @@ function App() {
           <Certifications />
         </Wrapper>
       </TopGradient>
+      <Wrapper>
+
       <Projects />
+      </Wrapper>
       <BottomGradient>
         <Carousel />
         <CTA />
