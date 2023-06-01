@@ -26,9 +26,9 @@ function App() {
           <TechCompanies />
           <Features />
           <Services />
+          <About />
+          <Certifications />
         </Wrapper>
-        <About />
-        <Certifications />
       </TopGradient>
       <Projects />
       <BottomGradient>
