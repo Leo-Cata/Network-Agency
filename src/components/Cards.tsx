@@ -45,12 +45,13 @@ const cardsData: data[] = [
 
 const Cards = () => {
   return (
-    <div className="flex flex-col items-center space-y-7 py-10 xl:flex-row xl:justify-center xl:space-y-0 xl:space-x-9 xl:pt-36">
+    // xl:pt-36 py-10
+    <div className="flex flex-col items-center space-y-7 xl:flex-row xl:justify-between xl:space-y-0 xl:space-x-9">
       {cardsData.map((data) => {
         const { title, text, features } = data;
         const featureKeys = Object.keys(features);
         return (
-          <div className="h-[400px] max-w-[350px] origin-bottom rounded-3xl border-2 border-white/20 bg-mainBlue p-8 text-start font-openSans text-white transition-all  duration-300 hover:border-white hover:bg-gradient-to-t hover:from-gradientLightBlueDarker hover:to-gradientLightBlue xl:hover:scale-110">
+          <div className="h-[400px] max-w-[350px] origin-bottom rounded-3xl border-2 border-white/20 bg-mainBlue p-8 text-start font-openSans text-white transition-all  duration-300 hover:border-white hover:bg-gradient-to-t hover:from-gradientLightBlueDarker hover:to-gradientLightBlue xl:hover:scale-y-105">
             <div>
               <h2 className="text-3xl font-semibold">{title}</h2>
               <p className="py-3">{text}</p>
