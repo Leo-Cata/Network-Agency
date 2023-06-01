@@ -31,8 +31,7 @@ function App() {
         </Wrapper>
       </TopGradient>
       <Wrapper>
-
-      <Projects />
+        <Projects />
       </Wrapper>
       <BottomGradient>
         <Carousel />

@@ -3,7 +3,7 @@ import { clipboard, yellowCertification } from '../assets';
 
 const Certifications = () => {
   return (
-    <div className="relative mt-10 mb-[666px] flex h-36 justify-center 2xl:mt-20 xl:mb-[424px] xl:h-48 2xl:h-56">
+    <div className="relative mt-10 mb-[540px] flex h-36 justify-center 2xl:mt-20 xl:mb-[370px] xl:h-48 2xl:h-56">
       <div className="absolute max-w-full">
         <div className="flex flex-col items-center rounded-[40px] border-[6px] border-white bg-gradient-to-t from-gradientLightBlueDarker to-gradientLightBlue font-openSans text-3xl font-semibold text-white xl:flex-row xl:space-x-56 xl:py-20 py-10">
           <div className="xl:space-y-16 xl:pl-[99px]">
