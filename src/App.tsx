@@ -24,8 +24,8 @@ function App() {
       <TopGradient>
         <Wrapper>
           <TechCompanies />
-        </Wrapper>
         <Features />
+        </Wrapper>
         <Services />
         <About />
         <Certifications />
