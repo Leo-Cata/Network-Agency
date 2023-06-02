@@ -6,7 +6,7 @@ import Copyright from './Copyright';
 
 const Footer = () => {
   return (
-    <footer className="px-6 2xl:px-[135px]">
+    <footer className='pt-10 2xl:pt-20'>
       <BrandandContact />
       <Links />
       <Copyright />

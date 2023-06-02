@@ -26,7 +26,7 @@ const aboutData: aboutData[] = [
 
 const AboutCards = () => {
   return (
-    <div className="my-10 flex flex-col items-center space-y-4 xl:flex-row xl:justify-center xl:space-x-9 xl:space-y-0">
+    <div className="py-10 flex flex-col items-center space-y-4 xl:flex-row xl:justify-center xl:space-x-9 xl:space-y-0 2xl:py-20">
       {aboutData.map((data) => (
         <div className=" w-2/3 max-w-[275px] space-y-3 rounded-xl bg-white px-8 py-4 text-mainBlue xl:h-[200px] xl:space-y-6 xl:px-11 xl:py-8">
           <h2 className="font-openSans text-5xl font-extrabold lg:text-6xl xl:text-7xl">

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Copyright = () => {
   return (
-    <div className="flex flex-col-reverse space-y-5 space-y-reverse py-10 font-atkinson text-white opacity-60 sm:flex-row sm:justify-between sm:space-y-0 lg:py-12">
+    <div className="flex flex-col-reverse space-y-5 space-y-reverse py-10 font-atkinson text-white opacity-60 sm:flex-row sm:justify-between sm:space-y-0 lg:pb-12 lg:pt-32">
       <h6 className="mx-auto max-w-[200px] text-center sm:mx-0 sm:max-w-none">
         Copyright @ UIHUT 2023. All rights reserved.
       </h6>

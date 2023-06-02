@@ -21,7 +21,8 @@ const projectCards: projectsData[] = [
 
 const ProjectsCards = () => {
   return (
-    <div className="flex flex-col items-center justify-center self-baseline 2xl:mx-36 2xl:flex 2xl:flex-row 2xl:flex-wrap 2xl:gap-y-20 2xl:space-x-10">
+    // 2xl:mx-36 
+    <div className="flex flex-col items-center justify-center self-baseline 2xl:flex 2xl:flex-row 2xl:flex-wrap 2xl:gap-y-20 2xl:space-x-10 gap-y-10">
       <div className="relative w-full">
         <img
           src={yellowProjects}
@@ -30,7 +31,7 @@ const ProjectsCards = () => {
         />
       </div>
       {projectCards.map((project) => (
-        <div className="my-7">
+        <div className="">
           <img
             src={project.img}
             alt={project.project}

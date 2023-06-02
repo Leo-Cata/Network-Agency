@@ -24,18 +24,22 @@ function App() {
       <TopGradient>
         <Wrapper>
           <TechCompanies />
+          <Features />
+          <Services />
+          <About />
+          <Certifications />
         </Wrapper>
-        <Features />
-        <Services />
-        <About />
-        <Certifications />
       </TopGradient>
-      <Projects />
+      <Wrapper>
+        <Projects />
+      </Wrapper>
       <BottomGradient>
-        <Carousel />
-        <CTA />
-        <Faq />
-        <Footer />
+        <Wrapper>
+          <Carousel />
+          <CTA />
+          <Faq />
+          <Footer />
+        </Wrapper>
       </BottomGradient>
     </div>
   );

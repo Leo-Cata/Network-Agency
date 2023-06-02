@@ -8,7 +8,7 @@ interface props {
 
 const CustomButton = ({ displayText, isTransparent, textColor }: props) => {
   return (
-    <div className="rounded-xl bg-gradient-to-r from-gradientOrangeLight to-gradientOrangeDark p-[2px]">
+    <div className="rounded-xl bg-gradient-to-r from-gradientOrangeLight to-gradientOrangeDark p-[2px] hover:scale-105 duration-75">
       <button
         className={`h-full w-full rounded-xl px-7 py-3 font-openSans font-medium ${textColor} ${
           isTransparent ? 'bg-mainBackground' : ''
