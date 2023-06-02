@@ -14,8 +14,9 @@ The live site is deployed on [Netlify](https://networkagency-leomat.netlify.app/
 ## Technologies used
 
 - React
-  - useState: Used for state management of various changing variables.
-  - useEffect: Used to get the width of the browser and perform conditional rendering based on it.
+  - `useState` Used for state management of various changing variables.
+  - `useEffect` Used to get the width of the browser and perform conditional rendering based on it.
+  - General use of conditional rendering, mapping
 - TypeScript
 - TailwindCSS
 - Framer Motion
