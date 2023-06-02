@@ -37,8 +37,8 @@ function App() {
         <Wrapper>
           <Carousel />
           <CTA />
+          <Faq />
         </Wrapper>
-        <Faq />
         <Footer />
       </BottomGradient>
     </div>
