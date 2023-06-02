@@ -57,7 +57,7 @@ const Carousel = () => {
   };
 
   return ( 
-  <div className='relative h-36 2xl:my-[225px] mb-[600px]'>
+  <div className='relative h-36 2xl:my-[215px] mb-[530px] sm:mb-[300px]'>
     <AnimatePresence mode="wait">
       <motion.div className='absolute -top-36'
         layout

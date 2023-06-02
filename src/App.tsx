@@ -36,8 +36,8 @@ function App() {
       <BottomGradient>
         <Wrapper>
           <Carousel />
+          <CTA />
         </Wrapper>
-        <CTA />
         <Faq />
         <Footer />
       </BottomGradient>
