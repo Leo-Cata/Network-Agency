@@ -34,7 +34,9 @@ function App() {
         <Projects />
       </Wrapper>
       <BottomGradient>
-        <Carousel />
+        <Wrapper>
+          <Carousel />
+        </Wrapper>
         <CTA />
         <Faq />
         <Footer />

@@ -56,14 +56,15 @@ const Carousel = () => {
     );
   };
 
-  return (
+  return ( 
+  <div className='relative h-36 2xl:my-[225px] mb-[600px]'>
     <AnimatePresence mode="wait">
-      <motion.div
+      <motion.div className='absolute -top-36'
         layout
         initial={{ height: 'auto' }}
         animate={{ height: 'fit-content' }}
         transition={{ duration: 0.3 }}>
-        <div className="mx-6 rounded-[40px] border-[6px] border-white bg-gradient-to-tr from-gradientOrangeLight to-gradientOrangeDark 2xl:mx-32">
+        <div className="rounded-[40px] border-[6px] border-white bg-gradient-to-tr from-gradientOrangeLight to-gradientOrangeDark">
           <div className="mx-8 my-10 flex flex-col 2xl:mx-[100px] 2xl:my-20 2xl:flex-row 2xl:space-x-5">
             <img
               src={quotationsTestimonials}
@@ -122,6 +123,7 @@ const Carousel = () => {
         </div>
       </motion.div>
     </AnimatePresence>
+    </div>
   );
 };
 
