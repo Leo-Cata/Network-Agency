@@ -24,6 +24,6 @@ body {
   overflow-x: hidden;
 }
 
-html {
+#root{
   overflow-x: hidden;
 }
