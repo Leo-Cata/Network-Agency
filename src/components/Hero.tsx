@@ -54,7 +54,7 @@ const Hero = () => {
       <img
         src={heroPurple}
         alt="abstract form"
-        className="absolute -right-8 w-28 md:hidden"
+        className="absolute -right-8 w-28 md:hidden overflow-x-hidden"
       />
     </div>
   );
