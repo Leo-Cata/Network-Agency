@@ -4,6 +4,10 @@ import ProjectsCards from './ProjectsCards';
 
 const Projects = () => {
   return (
+    // this has 3 simple parts
+    // the title
+    // the projects
+    // and the button
     <div className="py-10 xl:py-20">
       <h1 className="text-center font-openSans text-4xl font-semibold text-mainBlue 2xl:text-6xl 2xl:w-2/4 mx-auto">
         Comprised of diverse minds

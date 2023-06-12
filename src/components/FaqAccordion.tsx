@@ -8,6 +8,8 @@ interface AccordionItem {
 }
 
 const FaqAccordion = () => {
+
+  // state to save the index of the current accordion items is active, if any
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const accordionItems: AccordionItem[] = [
@@ -43,6 +45,7 @@ const FaqAccordion = () => {
     },
   ];
 
+  // gets the index and then sets it to active opening the selected element and closes whichever is active, if any
   const handleClick = (index: number) => {
     setActiveIndex(index === activeIndex ? null : index);
   };
@@ -56,9 +59,10 @@ const FaqAccordion = () => {
             className="py-6 text-white"
             layout="position"
             transition={{ duration: 0.3 }}>
+            {/* title + chevron icon for each of the faq accordions */}
             <div
               onClick={() => handleClick(index)}
-              className="flex cursor-pointer items-center">
+              className="flex cursor-pointer items-center justify-between">
               <motion.h1
                 layout="position"
                 className="pointer select-none font-openSans text-2xl font-semibold">
@@ -72,6 +76,9 @@ const FaqAccordion = () => {
                 <IoIosArrowDown className="text-2xl" />
               </motion.div>
             </div>
+            {/* title + chevron icon for each of the faq accordions ends */}
+
+            {/* if active index is equal to the index opens the accordion */}
             {activeIndex === index && (
               <motion.p
                 className="max-w-md pt-3 font-atkinson opacity-60"

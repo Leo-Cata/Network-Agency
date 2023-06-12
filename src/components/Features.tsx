@@ -3,9 +3,13 @@ import CustomButton from './CustomButton';
 import { notepad, person1, person2, person3, person4 } from '../assets';
 
 const Features = () => {
+  // array with the imgs of different people
   const peopleIcons = [person1, person2, person3, person4];
+
+
   return (
     <div className="flex flex-col items-center 2xl:justify-between xl:flex-row py-10 xl:py-20">
+      {/* main title, subtext, button and img */}
       <div className=" space-y-6 2xl:block">
         <div className="space-y-3 text-white">
           <h2 className="font-openSans text-4xl font-semibold md:text-6xl">
@@ -27,9 +31,8 @@ const Features = () => {
           <div className="inline-flex">
             {peopleIcons.map((person, index) => (
               <div
-                className={`rounded-full border-2 border-mainBlue p-[1px] ${
-                  index !== 0 ? '-ml-4' : ''
-                }`}>
+                className={`rounded-full border-2 border-mainBlue p-[1px] ${index !== 0 ? '-ml-4' : ''
+                  }`}>
                 <img src={person} alt="" key={index} className=" w-12" />
               </div>
             ))}
@@ -44,6 +47,8 @@ const Features = () => {
           </div>
         </div>
       </div>
+      {/* main title, subtext, button and img ends */}
+
 
       {/* right side notepad and person icon */}
       <div className="w-full sm:w-1/2 2xl:flex 2xl:w-4/5 2xl:justify-end">
@@ -54,6 +59,7 @@ const Features = () => {
           <img src={notepad} alt="" className="w-full" />
         </div>
       </div>
+      {/* right side notepad and person icon */}
     </div>
   );
 };
