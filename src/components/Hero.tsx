@@ -5,6 +5,7 @@ import CustomButton from './CustomButton';
 const Hero = () => {
   return (
     <div className="my-6 max-w-7xl">
+      {/* hero main title */}
       <div className="z-50 font-openSans text-5xl font-extrabold text-mainBlue md:flex md:justify-end lg:text-8xl">
         <h1 className="block md:inline-block">
           We develope the{' '}
@@ -31,7 +32,9 @@ const Hero = () => {
           className="absolute -right-48 -z-50 hidden w-96 md:block"
         />
       </div>
+      {/* hero main title ends */}
 
+      {/* hero subtext and button */}
       <div className="my-3 max-w-sm space-y-8">
         <h3 className="font-atkinson text-xl text-mainBlue">
           Empower your franchisees and locations to grow with our intelligent
@@ -45,6 +48,9 @@ const Hero = () => {
           />
         </div>
       </div>
+      {/* hero subtext and button ends */}
+
+      {/* purple background img */}
       <img
         src={heroPurple}
         alt="abstract form"

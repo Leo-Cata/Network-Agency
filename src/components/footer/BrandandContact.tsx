@@ -3,6 +3,7 @@ import { networkLogo } from '../../assets';
 import CustomButton from '../CustomButton';
 
 const BrandandContact = () => {
+  // logo separated between with the email
   return (
     <div className="justify-between border-b-[1px] border-white/10 pb-7 sm:mb-9 sm:flex">
       <img src={networkLogo} alt="network logo" className="w-20 pb-4" />

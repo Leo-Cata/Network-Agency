@@ -37,20 +37,27 @@ const carouselItems: CarouselItemProps[] = [
   },
 ];
 const Carousel = () => {
+  // state to save the currect active index
   const [activeIndex, setActiveIndex] = useState(0);
 
+  // state to know what button was pressed used to set the active index for the animations of the button
   const [lastClickedButton, setLastClickedButton] = useState<'prev' | 'next'>();
 
+  // handles when you press the next button
   const handleNextClick = () => {
     setLastClickedButton('next');
 
+    // if previndex is equal to the length of the items -1, the previndex doesnt change, else adds +1 to the index
     setActiveIndex((prevIndex) =>
       prevIndex === carouselItems.length - 1 ? prevIndex : prevIndex + 1,
     );
   };
+
+  // handles when you press the prev button
   const handlePrevClick = () => {
     setLastClickedButton('prev');
 
+    // if the previndex is equal to 0, dont change, else -1 to the index
     setActiveIndex((prevIndex) =>
       prevIndex === 0 ? prevIndex : prevIndex - 1,
     );
@@ -87,7 +94,7 @@ const Carousel = () => {
             <div className="mx-4 my-6 flex flex-col 2xl:mx-[100px] 2xl:my-20 2xl:flex-row 2xl:space-x-5">
               <img
                 src={quotationsTestimonials}
-                alt=""
+                alt="quotations mark"
                 className="w-5 self-end 2xl:hidden"
               />
               {/* carousel text part */}
@@ -112,11 +119,12 @@ const Carousel = () => {
                 </h4>
                 {/* carousel text part ends */}
               </motion.div>
+
               {/* carousel buttons */}
               <div className="flex-col justify-between 2xl:flex 2xl:min-w-[200px]">
                 <img
                   src={quotationsTestimonials}
-                  alt=""
+                  alt="quotations mark"
                   className="hidden w-16 self-end 2xl:block"
                 />
                 <div className="mt-3 flex justify-center space-x-10 text-white 2xl:mt-0">
