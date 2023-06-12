@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { quotationsTestimonials } from '../assets';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -56,73 +56,91 @@ const Carousel = () => {
     );
   };
 
-  return ( 
-  <div className='relative h-36 2xl:my-[215px] mb-[530px] sm:mb-[300px]'>
-    <AnimatePresence mode="wait">
-      <motion.div className='absolute -top-36'
-        layout
-        initial={{ height: 'auto' }}
-        animate={{ height: 'fit-content' }}
-        transition={{ duration: 0.3 }}>
-        <div className="rounded-[40px] border-[6px] border-white bg-gradient-to-tr from-gradientOrangeLight to-gradientOrangeDark">
-          <div className="mx-8 my-10 flex flex-col 2xl:mx-[100px] 2xl:my-20 2xl:flex-row 2xl:space-x-5">
-            <img
-              src={quotationsTestimonials}
-              alt=""
-              className="w-9 self-end 2xl:hidden"
-            />
-            {/* carousel text part */}
+  // to get a reference of the div element html
+  const elementRef = useRef<HTMLDivElement>(null)
 
-            <motion.div
-              key={carouselItems[activeIndex].company}
-              className="font-openSans text-white sm:h-fit"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.6 }}>
-              <h2 className="my-5 text-2xl font-semibold leading-[50px] 2xl:my-0 2xl:mb-20 2xl:text-4xl">
-                {carouselItems[activeIndex].title}
-              </h2>
-              <p className="mb-10 text-lg leading-9 opacity-80 2xl:mb-14 2xl:text-2xl">
-                {carouselItems[activeIndex].text}
-              </p>
-              <h3 className="mb-1 text-lg font-semibold">
-                {carouselItems[activeIndex].person}
-              </h3>
-              <h4 className="opacity-80">
-                {carouselItems[activeIndex].company}
-              </h4>
-              {/* carousel text part ends */}
-            </motion.div>
-            {/* carousel buttons */}
-            <div className="flex-col justify-between 2xl:flex 2xl:min-w-[200px]">
+  // to save the height
+  const [height, setHeight] = useState<number | null>(null)
+
+  // effect to get the height of the carousel to set proper Y paddings and margins 
+  useEffect(() => {
+    const carouselElement = elementRef.current
+    if (carouselElement) {
+      const carouseHeight = carouselElement.clientHeight
+      setHeight(carouseHeight)
+    }
+  }, [activeIndex])
+  // you get a ref for an html div element which is set to null by default, then create a state to save a heightm which is null by default, then each time activeIndex changes,
+  // create a const of the element referenced, if it exists,  create a const to save the height of that element then save the height which will later be used
+  // to set the height of the relative father div
+
+  return (
+    <div className='relative lg:mt-52 -mb-36' style={{ height: `${height}px` }}>
+      <AnimatePresence mode="wait">
+        <motion.div className='absolute -top-36'
+          ref={elementRef}
+          layout
+          initial={{ height: 'auto' }}
+          animate={{ height: 'fit-content' }}
+          transition={{ duration: 0.3 }}>
+          <div className="rounded-[40px] border-[6px] border-white bg-gradient-to-tr from-gradientOrangeLight to-gradientOrangeDark">
+            <div className="mx-4 my-6 flex flex-col 2xl:mx-[100px] 2xl:my-20 2xl:flex-row 2xl:space-x-5">
               <img
                 src={quotationsTestimonials}
                 alt=""
-                className="hidden w-16 self-end 2xl:block"
+                className="w-5 self-end 2xl:hidden"
               />
-              <div className="mt-7 flex justify-center space-x-10 text-white 2xl:mt-0">
-                <button
-                  className={
-                    lastClickedButton === 'prev' ? 'scale-150 duration-300' : ''
-                  }
-                  onClick={handlePrevClick}>
-                  <BsArrowLeft size={30} />
-                </button>
-                <button
-                  className={
-                    lastClickedButton === 'next' ? 'scale-150 duration-300' : ''
-                  }
-                  onClick={handleNextClick}>
-                  <BsArrowRight size={30} />
-                </button>
+              {/* carousel text part */}
+              <motion.div
+                key={carouselItems[activeIndex].company}
+                className="font-openSans text-white sm:h-fit"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.6 }}>
+                <h2 className="my-1 text-xl font-semibold 2xl:my-0 2xl:mb-20 2xl:text-4xl">
+                  {carouselItems[activeIndex].title}
+                </h2>
+                <p className="mb-5 text-lg leading-9 opacity-80 2xl:mb-14 2xl:text-2xl">
+                  {carouselItems[activeIndex].text}
+                </p>
+                <h3 className="mb-1 text-lg font-semibold">
+                  {carouselItems[activeIndex].person}
+                </h3>
+                <h4 className="opacity-80">
+                  {carouselItems[activeIndex].company}
+                </h4>
+                {/* carousel text part ends */}
+              </motion.div>
+              {/* carousel buttons */}
+              <div className="flex-col justify-between 2xl:flex 2xl:min-w-[200px]">
+                <img
+                  src={quotationsTestimonials}
+                  alt=""
+                  className="hidden w-16 self-end 2xl:block"
+                />
+                <div className="mt-3 flex justify-center space-x-10 text-white 2xl:mt-0">
+                  <button
+                    className={
+                      lastClickedButton === 'prev' ? 'scale-150 duration-300' : ''
+                    }
+                    onClick={handlePrevClick}>
+                    <BsArrowLeft size={30} />
+                  </button>
+                  <button
+                    className={
+                      lastClickedButton === 'next' ? 'scale-150 duration-300' : ''
+                    }
+                    onClick={handleNextClick}>
+                    <BsArrowRight size={30} />
+                  </button>
+                </div>
               </div>
             </div>
             {/* carousel buttons end */}
           </div>
-        </div>
-      </motion.div>
-    </AnimatePresence>
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 };
