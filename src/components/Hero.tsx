@@ -51,11 +51,13 @@ const Hero = () => {
       {/* hero subtext and button ends */}
 
       {/* purple background img */}
-      <img
-        src={heroPurple}
-        alt="abstract form"
-        className="absolute -right-14 w-28 md:hidden overflow-x-hidden"
-      />
+      <div className='overflow-x-hidden'>
+        <img
+          src={heroPurple}
+          alt="abstract form"
+          className="absolute -right-14 w-28 md:hidden overflow-x-hidden"
+        />
+      </div>
     </div>
   );
 };
