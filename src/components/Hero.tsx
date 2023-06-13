@@ -4,7 +4,7 @@ import CustomButton from './CustomButton';
 
 const Hero = () => {
   return (
-    <div className="my-6 max-w-7xl">
+    <div className="my-6 max-w-7xl relative">
       {/* hero main title */}
       <div className="z-50 font-openSans text-5xl font-extrabold text-mainBlue md:flex md:justify-end lg:text-8xl">
         <h1 className="block md:inline-block">
@@ -29,7 +29,7 @@ const Hero = () => {
         <img
           src={heroPurple}
           alt="abstract form"
-          className="absolute -right-48 -z-50 hidden w-96 md:block"
+          className="absolute -right-[600px] -z-50 hidden w-96 md:block"
         />
       </div>
       {/* hero main title ends */}
@@ -51,11 +51,13 @@ const Hero = () => {
       {/* hero subtext and button ends */}
 
       {/* purple background img */}
-      <img
-        src={heroPurple}
-        alt="abstract form"
-        className="absolute -right-8 w-28 md:hidden overflow-x-hidden"
-      />
+      <div className='overflow-x-hidden'>
+        <img
+          src={heroPurple}
+          alt="abstract form"
+          className="absolute -right-14 w-28 md:hidden overflow-x-hidden"
+        />
+      </div>
     </div>
   );
 };
