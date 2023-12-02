@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { networkLogo } from '../assets';
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import { motion, AnimatePresence } from 'framer-motion';
-import CustomButton from './CustomButton';
+import React, { useState } from "react";
+import { networkLogo } from "../assets";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { motion, AnimatePresence } from "framer-motion";
+import CustomButton from "./CustomButton";
 
 const Navbar = () => {
-  // state to save if the menu is open or not, 
+  // state to save if the menu is open or not,
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // handle function to set the menu to its opposite state
@@ -46,7 +46,7 @@ const Navbar = () => {
         </ul>
         <div className="hidden lg:block">
           <CustomButton
-            displayText={'Contact Us'}
+            displayText={"Contact Us"}
             isTransparent={true}
             textColor="text-mainBlue"
           />
@@ -58,12 +58,14 @@ const Navbar = () => {
       <motion.div
         layout
         onClick={handleMenu}
-        className="absolute w-full  lg:hidden">
+        className="absolute z-50  w-full lg:hidden"
+      >
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
               exit={{ scaleY: 0 }}
-              className="flex origin-top flex-col items-center rounded-b-[3rem] bg-mainBackground font-openSans text-mainBlue shadow-md">
+              className="flex origin-top flex-col items-center rounded-b-[3rem] bg-mainBackground font-openSans text-mainBlue shadow-md"
+            >
               <ul className="space-y-4 [&>li]:cursor-pointer">
                 <li>Pricing</li>
                 <li>Success</li>
@@ -73,7 +75,7 @@ const Navbar = () => {
               </ul>
               <div className="my-8">
                 <CustomButton
-                  displayText={'Contact Us'}
+                  displayText={"Contact Us"}
                   isTransparent={true}
                   textColor="text-mainBlue"
                 />
